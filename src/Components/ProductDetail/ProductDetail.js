@@ -19,14 +19,14 @@ function ProductDetail({ productId }) {
     })
     .catch(()=>{
       setLoading(false)
-      setIsError(true)
-      alert("Oops!")
+      alert("Oops!Something went wrong.")
     });
   },[])
   
   useEffect(() => {
     if (!productId) 
       return;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     getProductDetail(productId)
   },[productId, getProductDetail]);
   

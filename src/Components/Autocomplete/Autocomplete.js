@@ -14,7 +14,6 @@ function Autocomplete({onSuggestionSelection}) {
   const [currentSuggestionIndex, setCurrentSuggestionIndex] = useState(-1);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
 
   const inputRef = useRef()
   
@@ -28,8 +27,7 @@ function Autocomplete({onSuggestionSelection}) {
     })
     .catch(()=>{
       setLoading(false)
-      setIsError(true)
-      alert("Oops!")
+      alert("Oops!Something went wrong.")
     });
   },[])
   
