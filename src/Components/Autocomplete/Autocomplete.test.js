@@ -3,7 +3,7 @@ import {render, screen} from '@testing-library/react'
 
 import Autocomplete from "./Autocomplete";
 
-jest.mock("./utils/api");
+// jest.mock("./utils/api");
 
 describe("Autocomplete", () => {
   it("renders correctly", () => {
