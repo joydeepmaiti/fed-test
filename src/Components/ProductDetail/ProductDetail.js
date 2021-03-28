@@ -27,7 +27,6 @@ function ProductDetail({ productId }) {
   useEffect(() => {
     if (!productId) 
       return;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     getProductDetail(productId)
   },[productId, getProductDetail]);
   

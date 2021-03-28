@@ -14,7 +14,7 @@ function Suggestions({showSuggestions, suggestions, currentSuggestionIndex, onSu
 
     const renderSuggestions = (e) => {
         let suggestionsListComponent;
-        if (showSuggestions && suggestions.length) {
+        if (showSuggestions && suggestions.length>0) {
             suggestionsListComponent = (
                 <ul className="suggestions">
                     {suggestions.map((suggestion, index) => {
