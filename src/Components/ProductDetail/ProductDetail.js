@@ -17,9 +17,10 @@ function ProductDetail({ productId }) {
       setLoading(false)
       setProductInfo(productInfo)
     })
-    .catch(()=>{
+    .catch((err)=>{
       setLoading(false)
       alert("Oops!Something went wrong.")
+      //handle this error to show Error Snackbar
     });
   },[])
   

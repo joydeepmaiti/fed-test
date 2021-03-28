@@ -25,9 +25,10 @@ function Autocomplete({onSuggestionSelection}) {
       setSuggestions(_suggestions.splice(0,10))
       setShowSuggestions(true)
     })
-    .catch(()=>{
+    .catch((err)=>{
       setLoading(false)
       alert("Oops!Something went wrong.")
+      //handle this error to show Error Snackbar
     });
   },[])
   
