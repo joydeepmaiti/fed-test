@@ -61,8 +61,10 @@ function Autocomplete({onSuggestionSelection}) {
   };
   
   useEffect(() => {
-    if(!searchTerm || searchTerm.trim() === "")
+    if(!searchTerm || searchTerm.trim() === ""){
+      setShowSuggestions(false)
       return
+    }
     const timer = setTimeout(()=>{
       if(searchTerm === inputRef.current.value){
         console.log("inputRef.current.value",inputRef.current.value)
